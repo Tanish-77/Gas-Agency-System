@@ -1,0 +1,339 @@
+/* styles.css - Unified Styling for All Pages in Gas Agency System
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #0a3d62;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fdfdfd;
+}
+
+button {
+  width: 100%;
+  background-color: #0984e3;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0652dd;
+}
+
+a {
+  color: #0984e3;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul#bookingList, div#bookingRequests {
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+ul#bookingList li,
+div#bookingRequests div {
+  background: #eaf2f8;
+  border: 1px solid #d6e0eb;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  list-style-type: none;
+  font-size: 15px;
+}
+
+.header {
+  background: #0a3d62;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+nav {
+  background: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  button, input {
+    font-size: 15px;
+  }
+
+  .header {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  h1, h2, h3 {
+    font-size: 20px;
+  }
+
+  button, input {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+button.logout {
+  background-color: #d63031;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button.logout:hover {
+  background-color: #c0392b;
+} */
+/* styles.css - Unified Styling for All Pages in Gas Agency System */
+                                                         
+
+
+
+
+
+
+/*
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #0a3d62;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fdfdfd;
+}
+
+button {
+  width: 100%;
+  background-color: #0984e3;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0652dd;
+}
+
+button.logout {
+  background-color: #d63031;
+  margin-top: 5px;
+}
+
+button.logout:hover {
+  background-color: #c0392b;
+}
+
+a {
+  color: #0984e3;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul#bookingList, div#bookingRequests {
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+ul#bookingList li,
+div#bookingRequests div {
+  background: #eaf2f8;
+  border: 1px solid #d6e0eb;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  list-style-type: none;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul#bookingList li::before {
+  content: '🛢️';
+  margin-right: 10px;
+}
+
+.booking-status {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* .booking-status.Booked {
+  background-color: #d1f2eb;
+  color: #1e8449;
+} */
+ /*
+ .booking-status.booked {
+  background-color: #d1f2eb;
+  color: #1e8449;
+}
+
+
+.booking-status.Pending {
+  background-color: #fdebd0;
+  color: #d35400;
+}
+
+.booking-status.Rejected {
+  background-color: #f5b7b1;
+  color: #c0392b;
+}
+
+.header {
+  background: #0a3d62;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+nav {
+  background: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  button, input {
+    font-size: 15px;
+  }
+
+  .header {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  h1, h2, h3 {
+    font-size: 20px;
+  }
+
+  button, input {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gas Agency System</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e0f7ff);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.7s ease-in-out;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      color: #0a3d62;
+      margin-bottom: 10px;
+    }
+
+    h1 span {
+      color: #1e90ff;
+    }
+
+    .subheading {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background-color: #1e90ff;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(30, 144, 255, 0.2);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #006fd6;
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      margin-top: 40px;
+      padding: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to <span>Gas Agency System</span></h1>
+    <p class="subheading">Book, manage, and track your gas cylinder bookings online</p>
+    <div class="actions">
+      <a href="register.html" class="btn">Register</a>
+      <a href="login.html" class="btn">Login</a>
+    </div>
+  </div>
+
+  <!-- ✅ Footer inside body -->
+  <footer class="footer">
+    <p>&copy; 2025 Gas Agency System. All rights reserved.</p>
+    <p>Developed by Tanish Kalota</p>
+  </footer>
+</body>
+</html>

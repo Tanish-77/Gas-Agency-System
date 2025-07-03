@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f9ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  margin-top: 30px;
+  color: #0a3d62;
+  font-size: 28px;
+}
+
+#bookingRequests {
+  width: 90%;
+  max-width: 800px;
+  margin-top: 30px;
+}
+
+.booking-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.booking-card:hover {
+  transform: translateY(-3px);
+}
+
+.booking-card p {
+  margin: 8px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.booking-card strong {
+  color: #0a3d62;
+}
+
+.booking-card button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  color: white;
+  background-color: #1e90ff;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.booking-card button:hover {
+  background-color: #006fd6;
+  transform: translateY(-2px);
+}
+
+.booking-card button:nth-child(4) {
+  background-color: #e74c3c;
+}
+
+.booking-card button:nth-child(4):hover {
+  background-color: #c0392b;
+}
+</style>
+
+  </style>
+</head>
+<body>
+  <h2>Admin Dashboard</h2>
+  <button class="logout-btn" onclick="logoutUser()">Logout</button>
+
+  <div id="bookingRequests">Loading bookings...</div>
+
+  <script type="module" src="js/admin.js"></script>
+  <script type="module">
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js";
+    const auth = getAuth();
+
+    window.logoutUser = () => {
+      signOut(auth).then(() => {
+        alert("Logged out successfully.");
+        window.location.href = "login.html";
+      });
+    };
+  </script>
+</body>
+</html>

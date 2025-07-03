@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<style>
+  /* Booking Dashboard UI Enhancements */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f0f9ff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  margin-top: 40px;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 700px;
+}
+
+h2 {
+  color: #0a3d62;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#username {
+  color: #1e90ff;
+}
+
+#balanceCount {
+  font-size: 16px;
+  color: #27ae60;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.2);
+}
+
+button:hover {
+  background-color: #006fd6;
+  transform: translateY(-2px);
+}
+
+.logout {
+  background-color: #e74c3c;
+  margin-left: 10px;
+}
+
+.logout:hover {
+  background-color: #c0392b;
+}
+
+ul#bookingList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+ul#bookingList li {
+  background-color: #ecf5ff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.booking-status {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.booking-status.booked {
+  background-color: #f1c40f;
+  color: #fff;
+}
+
+.booking-status.approved {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.booking-status.rejected {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+</style>
+<body>
+  <div class="container">
+    <h2>User Dashboard</h2>
+    <p>Welcome <strong><span id="username"></span></strong></p>
+    <p>Available Cylinders: <strong id="balanceCount">Loading...</strong></p>
+
+    <button onclick="bookCylinder()">Book New Cylinder</button>
+    <button class="logout" onclick="logoutUser()">Logout</button>
+
+    <h3>My Booking History</h3>
+    <ul id="bookingList"></ul>
+  </div>
+
+  <!-- ✅ Firebase JS Modules -->
+  <script type="module" src="js/booking.js"></script>
+  <script type="module" src="js/auth.js"></script>
+
+  <!-- ✅ EmailJS SDK -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("143hPpR4ncR6aWtHv"); // Replace with your actual EmailJS public key
+  </script>
+
+  <!-- ✅ jsPDF for Invoice -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
