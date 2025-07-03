@@ -15,12 +15,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC9O2QzwVsVPbN0suMjloIyfb6NPuEyDWk",
-  authDomain: "gasagencysystem-940bc.firebaseapp.com",
-  projectId: "gasagencysystem-940bc",
-  storageBucket: "gasagencysystem-940bc.appspot.com",
-  messagingSenderId: "804191491008",
-  appId: "1:804191491008:web:a9f986fc0f32ca1b926e25",
+ 
 };
 
 const app = initializeApp(firebaseConfig);
