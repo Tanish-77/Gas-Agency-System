@@ -4,19 +4,5 @@
 firebase-debug.log
 pglite-debug.log
 firebase.js
-firebase.jsonfirebase.indexes.json
 firestore.rules
 firestore.indexes.json
-# System files
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Node modules (if used in future)
-node_modules/
-
-# Environment files
-.env
-.env.*
